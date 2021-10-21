@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: beige;
+}
+
+.img-box{
+    width: auto;
+    height: 670px;
+    background-image: url("../image/nightmarket1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    animation: slide 10s infinite;
+}
+
+.logo{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+
+.first-container{
+    position: absolute;
+    width: 30%;
+    top: 40%;
+    left: 35%;
+    z-index: 1;
+}
+
+.buttons .btn1{
+    width: 98%;
+    margin: 20px auto 0;
+    padding: 12px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #1daa53;
+}
+.buttons .btn2{
+    width: 98%;
+    margin: 20px auto 0;
+    padding: 12px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #dbd0d0;
+}
+.buttons .btn1:hover{
+    background-color: #1daa53;
+}
+
+.buttons .btn2:hover{
+    background-color: #dbd0d0;
+}
+
+.buttons a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.second-container{
+    margin-top: 1%;
+    position: relative;
+}
+
+.second-container h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.second-container p{
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+.second-container a{
+    position: absolute;
+    margin-top: 100px;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    padding: 12px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #1daa53;
+    text-decoration: none;
+    color: black;
+}
+.second-container a:hover{
+    background-color: #1daa53;
+}
+
+
+@keyframes slide{
+    0%{background-image: url("../image/nightmarket1.jpg");}
+    40% {
+        background-image: url("../image/nightmarket2.jpeg");
+    }
+    80% {
+        background-image: url("../image/nightmarket3.jpeg");
+    }
+}
