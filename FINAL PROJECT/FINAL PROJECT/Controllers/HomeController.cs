@@ -38,5 +38,17 @@ namespace FINAL_PROJECT.Controllers
         {
             return View();
         }
+        public IActionResult ContactForm()
+        {
+            return View();
+        }
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Add()
+        {
+            return View();
+        }
     }
 }
