@@ -1,70 +1,66 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
 
 <style>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
     body {
-        background-color: lightgray;
+        background-color: gray;
+        text-align: center;
     }
 
-    .row {
-        background-color: white;
-        border-radius: 100px;
-    }
-
-    img {
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
+    .container {
+        text-align: center;
+        margin-left: 200px;
     }
 </style>
 
 <section>
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-lg-5">
-                <img src="~/image/mount4.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-lg-7 px-5 pt-md-5">
-
-                <h1 class="font-weight-bold py-3">ADD NEW STUDENT</h1>
-                <form asp-controller="Login" asp-action="Add" method="post">
+        <div class="container">
+            <div class="col-lg-5 px-10 pt-md-5">
+                <h1 class="font-weight-bold py-3">ADD NEW ITEM</h1>
+                <form asp-controller="LogIn" asp-action="Add" method="post">
                     <div class="form-row">
                         <div class="col-lgl-7">
-                            LastName
-                            <input type="text" name="LastName"
-                                   class="form-control" />
-                            <span class="text=danger" ></span>
+                            <input type="text" name="Name"
+                                   class="form-control" placeholder="ITEM NAME" />
+                            <span class="text=danger"></span>
                             <br />
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="col-lgl-7">
-                            FirstName
-                            <input type="text" name="FirstName"
-                                   class="form-control"/>
-                            <span class="text=danger" ></span>
+                            <input type="text" name="Description"
+                                   class="form-control" placeholder="DESCRIPTION" />
+                            <span class="text=danger"></span>
                             <br />
                         </div>
                     </div>
 
-                    <a asp-controller="Login" asp-action="List"
+                    <div class="form-row">
+                        <div class="col-lgl-7">
+                            <input type="text" name="Stocks"
+                                   class="form-control" placeholder="STOCKS" />
+                            <span class="text=danger"></span>
+                            <br />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-lgl-7">
+                            <input type="text" name="Price"
+                                   class="form-control" placeholder="PRICE" />
+                            <span class="text=danger"></span>
+                            <br />
+                        </div>
+                    </div>
+
+                    <a asp-controller="LogIn" asp-action="List"
                        class="btn btn-secondary">
                         Back
                     </a>
                     <button type="submit" class="btn btn-success">
-                        Add Student
+                        ADD
                     </button>
                 </form>
             </div>
         </div>
-    </div>
 </section>
