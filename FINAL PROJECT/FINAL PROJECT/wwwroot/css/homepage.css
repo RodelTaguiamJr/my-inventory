@@ -20,14 +20,14 @@ body{
 
 .logo{
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 5px;
+    left: 15px;
     z-index: 1;
 }
 
 .logo img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 
