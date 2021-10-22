@@ -6,11 +6,13 @@
 
 body {
     text-align: center;
-    background: linear-gradient(to right, #096208, #9fcf13);
     width: auto;
-    height: 100px;
+    height: 720px;
+    background-image: url("../image/register.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .first-container {
@@ -20,6 +22,7 @@ body {
     background: #fff;
     border-radius: 5px;
     position: relative;
+    border-radius: 20px;
     
 }
 
@@ -51,4 +54,6 @@ form input{
      width: 80px;
      height: 80px;
 }
+
+
 
