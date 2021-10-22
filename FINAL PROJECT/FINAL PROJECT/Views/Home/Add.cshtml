@@ -1,8 +1,11 @@
 ﻿
 
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
     body {
-        background-color: gray;
         text-align: center;
     }
 
@@ -10,9 +13,34 @@
         text-align: center;
         margin-left: 200px;
     }
+
+    .img-box {
+        width: auto;
+        height: 200px;
+        background-image: url('..wwwroot\image\register.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    .logo {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: 1;
+    }
+
+    .logo img {
+         width: 100px;
+         height: 100px;
+    }
+
 </style>
 
 <section>
+    <div class="img-box">
+
+    </div>
         <div class="container">
             <div class="col-lg-5 px-10 pt-md-5">
                 <h1 class="font-weight-bold py-3">ADD NEW ITEM</h1>
@@ -61,6 +89,10 @@
                         ADD
                     </button>
                 </form>
+
+                <div class="logo">
+                    <img src="~/image/Logo.png" alt="logo" />
+                </div>
             </div>
         </div>
 </section>
