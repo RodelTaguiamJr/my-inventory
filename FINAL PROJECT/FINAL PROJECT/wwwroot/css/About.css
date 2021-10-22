@@ -1,0 +1,126 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.about{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: lightgray;
+}
+
+.about img{
+    height: 300px;
+    width: 400px;
+}
+
+.about-text{
+    width: 550px;
+}
+
+.first-container{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.h1{
+    text-align: center;
+}
+.h1 img{
+    height: 100px;
+    width: 100px;
+}
+.h1-container {
+    width: 100%;
+    padding: 0 0;
+    background-color: white;
+}
+
+
+
+.about-text {
+    width: 550px;
+}
+
+.about3 {
+    width: 100%;
+    padding: 78px 0px;
+    background-color: lightgray;
+}
+
+    .about3 img {
+        height: 300px;
+        width: 400px;
+    }
+
+.about-text3 {
+    width: 550px;
+}
+
+.third-container {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.about-text h3{
+    color: darkgreen;
+    font-size: 55px;
+    margin-bottom: 25px;
+    letter-spacing:2px;
+}
+
+.about-text3 h3 {
+    color: darkgreen;
+    font-size: 55px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.second-container {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about2 {
+    width: 100%;
+    padding: 78px 0px;
+    background-color: lightgray;
+}
+
+.about-text2{
+    float: left;
+    width: 55%;
+
+}
+.image-section{
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 400px;
+    height: 300px;
+}
+
+.about-text2 h3 {
+    color: darkgreen;
+    font-size: 55px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
