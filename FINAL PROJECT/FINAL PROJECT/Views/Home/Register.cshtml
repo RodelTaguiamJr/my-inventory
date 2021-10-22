@@ -6,88 +6,163 @@
 @{
     ViewData["Title"] = "Register";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Register.css">
+    <title>Home</title>
+    <link href='https://fonts.googleapis.com/css?family=Saira Semi Condensed' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Saira Semi Condensed';
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <h1>@ViewData["Title"]</h1>
 
-<h1>@ViewData["Title"]</h1>
-
-<div class="row">
-    <div class="col-md-4">
-        <form  method="post">
+    <div class="a-container">
+        <form method="post" id="form1">
             <h4>Owner Details</h4>
             <hr />
             <div class="text-danger"></div>
             <div class="form-group">
-                <label>First Name</label>
-                <input class="form-control" />
+                <input type="text" placeholder="FIRST NAME" />
                 <span class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Middle Name</label>
-                <input class="form-control" />
+                <input type="text" placeholder="MIDDLE NAME" />
                 <span class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Last Name</label>
-                <input class="form-control" />
+                <input type="text" placeholder="LAST NAME" />
                 <span class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Mobile Number</label>
-                <input class="form-control" />
+                <input type="text" placeholder="MOBILE NUMBER" />
                 <span class="text-danger"></span>
             </div>
-           
+
+            <div class="btn-box">
+                <button type="button" id="Next1">NEXT</button>
+            </div>
         </form>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Business Details</h4>
-            <hr />
-            <div class="form-group">
-                <label>Business Name</label>
-                <input class="form-control" />
-                <span class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label>Location</label>
-                <input class="form-control" />
-                <span class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label>Category</label>
-                <select name="cars" id="cars">
-                    <option value="volvo">Medical Supplies</option>
-                    <option value="saab">Food</option>
-                </select>
-                <span class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label>Social Media accounts</label>
-                <textarea id="w3review" name="w3review" rows="4" cols="50">
+        <form id="form2">
+            <section>
+                <h4>Business Details</h4>
+                <hr />
+                <div class="form-group">
+                    <input type="text" placeholder="BUSINESS NAME" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="LOCATION" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="cars" id="cars">
+                        <option value="volvo">Medical Supplies</option>
+                        <option value="saab">Food</option>
+                    </select>
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Social Media accounts</label>
+                    <textarea id="w3review" name="w3review" rows="2" cols="20">
                 </textarea>
-                <span class="text-danger"></span>
-            </div>
-        </section>
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="btn-box">
+                    <button type="button" id="Back1">BACK</button>
+                    <button type="button" id="Next2">NEXT</button>
+                </div>
+            </section>
+        </form>
+       
+        <form id="form3">
+            <section>
+                <h4>Login Details</h4>
+                <hr />
+                <div class="form-group">
+                    <input type="text" placeholder="USERNAME" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="PASSWORD" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="CONFIRM PASSWORD" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="btn-box">
+                    <button type="button" id="Back2">BACK</button>
+                    <button type="submit" id="REGISTER">REGISTER</button>
+                </div>
+            </section>
+        </form>
+        
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small> 1 </small></div>
+            <div class="step-col"><small> 2 </small></div>
+            <div class="step-col"><small> 3 </small></div>
+        </div>
+
     </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Login Details</h4>
-            <hr />
-            <div class="form-group">
-                <label>Username</label>
-                <input class="form-control" />
-                <span class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input class="form-control" />
-                <span class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input class="form-control" />
-                <span class="text-danger"></span>
-            </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-        </section>
-    </div>
-</div>
+
+<script>
+
+    var form1 = document.getElementById("form1");
+    var form2= document.getElementById("form2");
+    var form3 = document.getElementById("form3");
+
+
+    var Next1 = document.getElementById("Next1");
+    var Next2 = document.getElementById("Next2");
+    var Back1 = document.getElementById("Back1");
+    var Back2 = document.getElementById("Back2");
+
+    var progress = document.getElementById("progress");
+
+    Next1.onclick = function(){
+        form1.style.left = "-450px";
+        form2.style.left = "40px";
+        progress.style.width = "240px";
+
+    }
+
+    Back1.onclick = function () {
+        form1.style.left = "40px";
+        form2.style.left = "450px";
+        progress.style.width = "120px";
+
+    }
+
+    Next2.onclick = function () {
+        form2.style.left = "-450px";
+        form3.style.left = "40px";
+        progress.style.width = "360px";
+
+    }
+
+    Back2.onclick = function () {
+        form2.style.left = "40px";
+        form3.style.left = "450px";
+        progress.style.width = "240px";
+
+    }
+
+</script>
+
+
+
+</body>
+</html>
+
+
