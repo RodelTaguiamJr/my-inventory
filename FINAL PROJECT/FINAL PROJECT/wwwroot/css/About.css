@@ -5,7 +5,13 @@
 }
 
 body {
-    background-color: black;
+    width: auto;
+    height: 720px;
+    background-image: url("../image/Main page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .about{
