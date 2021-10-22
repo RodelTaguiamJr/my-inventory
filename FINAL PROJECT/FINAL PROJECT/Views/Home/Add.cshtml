@@ -1,98 +1,50 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Add Item";
+}
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        text-align: center;
-    }
 
-    .container {
-        text-align: center;
-        margin-left: 200px;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Add.css">
+    <title>Home</title>
+    <link href='https://fonts.googleapis.com/css?family=Saira Semi Condensed' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Saira Semi Condensed';
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first-container">
+        <form>
+            <h1>ADD ITEM</h1>
+            <div>
+                <input type="text" placeholder="ITEM NAME" />
+            </div>
+            <div>
+                <input type="text" placeholder="DESCRIPTION" />
+            </div>
+            <div>
+                <input type="text" placeholder="STOCKS" />
+            </div>
+            <div>
+                <input type="text" placeholder="PRICE" />
+            </div>
+            <div class="btn-success">
+                <input type="submit" value="ADD" name="btnAdd" />
+            </div>
 
-    .img-box {
-        width: auto;
-        height: 200px;
-        background-image: url('..wwwroot\image\register.jpg');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-    }
-
-    .logo {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        z-index: 1;
-    }
-
-    .logo img {
-         width: 100px;
-         height: 100px;
-    }
-
-</style>
-
-<section>
-    <div class="img-box">
+        </form>
 
     </div>
-        <div class="container">
-            <div class="col-lg-5 px-10 pt-md-5">
-                <h1 class="font-weight-bold py-3">ADD NEW ITEM</h1>
-                <form asp-controller="LogIn" asp-action="Add" method="post">
-                    <div class="form-row">
-                        <div class="col-lgl-7">
-                            <input type="text" name="Name"
-                                   class="form-control" placeholder="ITEM NAME" />
-                            <span class="text=danger"></span>
-                            <br />
-                        </div>
-                    </div>
 
-                    <div class="form-row">
-                        <div class="col-lgl-7">
-                            <input type="text" name="Description"
-                                   class="form-control" placeholder="DESCRIPTION" />
-                            <span class="text=danger"></span>
-                            <br />
-                        </div>
-                    </div>
+    <div class="logo">
+        <img src="~/image/LOGO(black).png" />
+    </div>
 
-                    <div class="form-row">
-                        <div class="col-lgl-7">
-                            <input type="text" name="Stocks"
-                                   class="form-control" placeholder="STOCKS" />
-                            <span class="text=danger"></span>
-                            <br />
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="col-lgl-7">
-                            <input type="text" name="Price"
-                                   class="form-control" placeholder="PRICE" />
-                            <span class="text=danger"></span>
-                            <br />
-                        </div>
-                    </div>
-
-                    <a asp-controller="LogIn" asp-action="List"
-                       class="btn btn-secondary">
-                        Back
-                    </a>
-                    <button type="submit" class="btn btn-success">
-                        ADD
-                    </button>
-                </form>
-
-                <div class="logo">
-                    <img src="~/image/Logo.png" alt="logo" />
-                </div>
-            </div>
-        </div>
-</section>
+</body>
+</html>
