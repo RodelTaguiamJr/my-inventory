@@ -1,0 +1,65 @@
+﻿@model FINAL_PROJECT.Models.StoreViewModel
+@inject FINAL_PROJECT.Data.ApplicationDBContext _context
+
+@{
+    ViewData["Title"] = "My Store";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="card">
+                <div class="list-group">
+                    <a href="~/Store"
+                       class="list-group-item active d-flex justify-content-between align-items-center"
+                       style="text-decoration: none;"
+                       aria-current="true">
+                        All Categories
+                        <span class="badge badge-info badge-pill">
+                            @Model.BusinessList.Count
+                        </span>
+                    </a>
+                    @foreach (var item in Model.BusinessList)
+                    {
+                        var totalRecords = _context.Items
+                            .Where(p => p.CatBusiness == item.BOID)
+                            .ToList().Count;
+                        <a href="~/Store?c=@item.BOID"
+                           class="list-group-item d-flex justify-content-between align-items-center"
+                           style="text-decoration: none;">
+                            @item.Name (@item.Type)
+                            <span class="badge badge-info badge-pill">
+                                @totalRecords
+                            </span>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9">
+            <div class="row">
+                @foreach (var item in Model.ItemList.OrderBy(p => p.Price).ToList())
+                {
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="~/img/items/@(item.ImagePath)"
+                                 class="card-img-top"
+                                 alt="@(item.Name)"
+                                 style="height:200px;object-fit:cover;object-position:center;" />
+                            <div class="card-body">
+                                <h5 class="card-title">@(item.Name)</h5>
+                                <p class="card-text">@(item.Description)</p>
+                                <p class="card-text">Stock:@(item.Available)</p>
+                                <p class="card-text">Php@(item.Price.ToString("N"))</p>
+                                <a href="@(Url.Action("Cart", "Store", new { id = item.ItemId}))"
+                                   class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                        <br /><br />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
