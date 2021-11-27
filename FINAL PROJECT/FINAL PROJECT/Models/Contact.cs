@@ -25,6 +25,5 @@ namespace FINAL_PROJECT.Models
         [Required(ErrorMessage = "Required.")]
         [DataType(DataType.MultilineText)]
         public string Message { get; set; }
-
     }
 }
