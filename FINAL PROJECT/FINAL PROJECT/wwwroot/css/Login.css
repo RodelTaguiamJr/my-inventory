@@ -1,21 +1,39 @@
-﻿body {
-    text-align: center;
-    width: auto;
-    height: 720px;
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-image: url("../image/log in bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }
+.logo {
+    position: absolute;
+    top: 50px;
+    bottom: 100px;
+    align-content: center;
+    z-index: -1;
+}
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+        top: 50px;
+        bottom: 100px;
+    }
 
 .row {
     width: 360px;
-    height: 500px;
+    height: 380px;
     margin: 8% auto;
+    display: flex;
     background: #000;
     border-radius: 5px;
-    position: relative;
     border-radius: 20px;
 }
 
@@ -37,6 +55,12 @@ form input {
     outline: none;
     border-bottom: 1px solid #999;
     background: white;
+}
+.row form-group label {
+    text-align: left;
+}
+.row form-group p a {
+    font-size: 4rem;
 }
 
 .row form {

@@ -11,7 +11,7 @@ namespace FINAL_PROJECT.Models
     public class Item
     {
         [Key]
-        public int ItemId { get; set; }
+        public int ItemId { get; set; } 
 
         [Required(ErrorMessage = "Required")]
         public string Name { get; set; }
